@@ -1,26 +1,162 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+    box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #272928;
+    color: #b1b1b1;
+    margin: 0 32px;
+    min-height: 100%;
+}
+
+@layer utilities {
+    @keyframes square-left {
+        0% {
+        transform: translate(0, 0);
+        }
+        25% {
+        transform: translate(-2.5rem, 0); 
+        }
+        50% {
+        transform: translate(-2.5rem, -2.5rem);
+        }
+        75% {
+        transform: translate(0, -2.5rem);
+        }
+        100% {
+        transform: translate(0, 0);
+        }
+    }
+
+    @keyframes square-right {
+        0% {
+        transform: translate(0, 0);
+        }
+        25% {
+        transform: translate(-2.5rem, 0); 
+        }
+        50% {
+        transform: translate(-2.5rem, 2.5rem);
+        }
+        75% {
+        transform: translate(0, 2.5rem);
+        }
+        100% {
+        transform: translate(0, 0);
+        }
+    }
+
+    @keyframes slide-left {
+        0% {
+        transform: translate(0, 0);
+        }
+        25% {
+        transform: translate(-2.5rem, 0);
+        }
+        50% {
+        transform: translate(0, 0);
+        }
+        75% {
+        transform: translate(2.5rem, 0);
+        }
+        100% {
+        transform: translate(0, 0);
+        }
+    }
+
+    @keyframes slide-right {
+        0% {
+        transform: translate(0, 0);
+        }
+        25% {
+        transform: translate(2.5rem, 0);
+        }
+        50% {
+        transform: translate(0, 0);
+        }
+        75% {
+        transform: translate(-2.5rem, 0);
+        }
+        100% {
+        transform: translate(0, 0);
+        }
+        
+    }
+
+    .counter-up-left {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: square-left 3s infinite;
+    }
+
+    .counter-up-right {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: square-right 3s infinite;
+    }
+
+    .counter-down-left {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: square-left 3s infinite;
+    }
+
+    .counter-down-right {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: square-right 3s infinite;
+    }
+
+    .counter-left {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: slide-left 3s infinite;
+    }
+
+    .counter-right {
+        @apply transition-all duration-1000 ease-in-out;
+        animation: slide-right 3s infinite;
+    }
+}
+
+.project__languages--react {
+    color: #61DAFB;
+}
+
+.project__languages--javascript {
+    color: #F7DF1E;
+}
+
+.project__languages--css {
+    color: #264DE4;
+}
+
+.project__languages--html {
+    color: #E34F26;
+}
+
+.project__languages--node {
+    color: #339933;
+}
+
+.project__languages--express {
+    color: #888888	;
+}
+
+.project__languages--ejs {
+    color: #A91E50;
+}
+
+.project__languages--react {
+    color: #61DAFB;
+}
+
+.project__languages--typescript {
+    color: #3178C6;
+}
+
+.project__languages--tailwind {
+    color: #38BDF8;
 }
