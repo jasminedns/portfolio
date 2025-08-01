@@ -88,11 +88,11 @@ export default function Home() {
     <div className='relative page'>
       {intro && 
         <div className={`grid grid-cols-3 text-2xl text-black absolute z-99 bg-[#e0b0ff] min-h-screen min-w-screen -right-8 -top-22 transition-all duration-500 ease-in-out ${overpassMono.className} ${animateOut ? '-translate-y-[150%]' : 'translate-y-0'}`}>
-          <div className='flex flex-col justify-between p-4 '>
-            <div className='counter-up-left rotate-270 mt-10'>
+          <div className='flex flex-col justify-between items-start p-4 '>
+            <div className='counter-up-left rotate-270 mt-10 ml-20'>
               {count}
             </div>
-            <div className='counter-down-left rotate-270 mb-20'>
+            <div className='counter-down-left rotate-270 mb-20 ml-20'>
               {count}
             </div>
           </div>
@@ -115,22 +115,22 @@ export default function Home() {
         </div>
       }
       <div className='relative min-h-[90vh] md:flex md:flex-col md:justify-center md:items-center'>
-        <Image src='/home-bg.jpg' alt='purple background image' width={1000} height={700} className='hidden md:block mt-5 w-full h-screen'/>
-        <div className='text-center md:border-0 md:absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] md:w-[70%] md:p-[25px] md:bg-[rgba(255,255,255,0.2)] md:backdrop-blur-[10px] md:shadow-[0_0_10px_rgba(255,255,255,0.5)]'>
-          <div className="mx-0 md:py-10 grid grid-rows-[1fr_1fr_1fr] min-h-[90vh]">
-            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] ${overpassMono.className} my-auto`}>
-              <h2 className='md:py-0 text-left md:text-center'>Front-</h2>
-              <h2 className='md:py-0 text-left md:text-center'>end</h2>
+        <Image src='/home-bg.jpg' alt='purple background image' width={1000} height={700} className='hidden md:block mt-5 w-full h-[90vh]'/>
+        <div className='text-center md:border-0 md:absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] md:w-full md:p-[25px]'>
+          <div className="mx-0 md:py-10 grid grid-rows-[1fr_1fr_1fr] md:grid-cols-2 min-h-[90vh]">
+            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] md:pl-10 md:row-start-1 ${overpassMono.className} my-auto`}>
+              <h2 className='md:py-0 text-left'>Front-</h2>
+              <h2 className='md:py-0 text-left'>end</h2>
             </div>
-            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] ${overpassMono.className} my-auto`}>
-              <h2 className='text-right md:text-center second-title'>Dev</h2>
-              <h2 className='text-right md:text-center second-title'>eloper</h2>
+            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] md:pr-10 md:row-start-3 md:col-start-2 ${overpassMono.className} my-auto`}>
+              <h2 className='text-right'>Dev</h2>
+              <h2 className='text-right'>eloper</h2>
             </div>
-            <div className='my-auto flex flex-col items-center text-lg leading-7 font-bold md:text-[ivory] row-start-2'>
+            <div className='my-auto flex flex-col items-center text-lg leading-7 font-bold md:text-[ivory] row-start-2 md:col-start-1 md:col-end-3 md:px-30'>
               { fullWelcome 
                 ? 
                   <p>
-                    Welcome, I'm thrilled to have you here! On this website, you'll get a glimpse
+                    On this website, you'll get a glimpse
                     into who I am, my journey as a developer, and the projects I've been working on.
                     I don't know why you're here, maybe just for curiosity, either way,
                     I hope you find something that sparks your interest. If you have any questions 
@@ -142,7 +142,7 @@ export default function Home() {
                   </p>
               }
               <div className={`${fullWelcome ? "hidden" : "block"} mt-5`}>
-                <CaretDoubleDown className='text-[#e0b0ff] animate-bounce' size={32} onClick={() => setFullWelcome(true)}/>
+                <CaretDoubleDown className='text-[#e0b0ff] animate-bounce cursor-pointer' size={32} onClick={() => setFullWelcome(true)}/>
               </div>
             </div>
           </div>

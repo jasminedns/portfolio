@@ -15,11 +15,11 @@ const About = () => {
                     <span id="about_decoration" className="h-[3px] w-full bg-[#e0b0ff] absolute top-19 left-0"></span>
                 </h2>
             </div>
-            <div className='flex flex-col mt-8 md:flex-row md:justify-evenly'>
-                <div className='w-full h-auto md:w-[30%] md:min-h-[500px]'>
+            <div className='flex flex-col mt-8 lg:flex-row md:justify-evenly'>
+                <div className='w-full h-auto md:w-[60%] lg:w-[30%] md:min-h-[500px] md:mx-auto md:mb-15'>
                     <Image src={'/personal-thumbnail.jpg'} alt='picture of Jasmine' height={500} width={300} className='h-auto w-full'/>
                 </div>
-                <div className='md:h-[500px] md:border-y-[0.5px] my-5 md:my-auto md:mx-0 text-center md:w-[40%] flex flex-col justify-center items-center'>
+                <div className='md:h-[500px] md:border-y-[0.5px] my-5 md:my-auto  text-center md:w-[80%] md:mx-auto lg:w-[40%] flex flex-col justify-center items-center'>
                     { fullDescription 
                         ?
                             <p className='text-lg leading-7 p-3'>
@@ -40,7 +40,7 @@ const About = () => {
                             </p>
                     }
                     <div className={`mt-5 ${fullDescription ? "hidden" : "block"}`}>
-                        <CaretDoubleDown size={32} className='text-[#e0b0ff] animate-bounce' onClick={() => setFullDescription(true)}/>
+                        <CaretDoubleDown size={32} className='text-[#e0b0ff] animate-bounce cursor-pointer' onClick={() => setFullDescription(true)}/>
                     </div>
                 </div>
             </div> 

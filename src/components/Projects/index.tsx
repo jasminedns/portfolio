@@ -98,8 +98,8 @@ const Projects = ({purpleFont}:ProjectProps) => {
             </div>
             <div className='hidden md:block my-3 text-center'>
                 <div className='w-full my-4'>
-                    <h2 className="text-2xl text-[#e0b0ff]">{website[currentIndex].name}</h2>
-                    <div className="my-6 text-[#e0b0ff]">Made with: 
+                    <h2 className={`text-2xl text-[#e0b0ff] ${purpleFont}`}>{website[currentIndex].name}</h2>
+                    <div className={`my-6 text-[#e0b0ff] ${purpleFont}`}>Made with: 
                         <div className="mx-4 flex flex-wrap md:flex-row justify-center">
                             {website[currentIndex].languages.map((item, index) => (
                                 <span key={index} className={`mx-3 my-2 project__languages--${item.toLowerCase()}`}>{item}</span>
