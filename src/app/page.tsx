@@ -27,6 +27,10 @@ export default function Home() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     document.documentElement.style.overflow = intro ? "hidden" : "auto";
   }, [intro]);
 
