@@ -55,7 +55,7 @@ const Header = ({font}:HeaderProps) => {
                                         }
                                         setOpen(false);
                                     }} 
-                                    className="inline-block font-semibold text-center no-underline cursor-pointer"                                
+                                    className="inline-block font-semibold text-center no-underline"                                
                                 >
                                 {item.label}
                                 </a>
@@ -78,7 +78,7 @@ const Header = ({font}:HeaderProps) => {
                                     setOpen(false);
                                 }} 
                                 className="inline-block font-semibold relative min-h-[19px] w-[84px] text-center no-underline 
-                                    hover:font-bold hover:transition-all hover:duration-500 ease-in-out group"
+                                    hover:font-bold hover:transition-all hover:duration-500 ease-in-out cursor-pointer group"
                             >
                             {item.label}
                             <span className="absolute top-1/2 left-1/2 w-[50px] h-[50px] rounded-full opacity-0 scale-0 blur-[10px] 
