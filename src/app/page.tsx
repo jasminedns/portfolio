@@ -35,7 +35,7 @@ export default function Home() {
   }, [intro]);
 
   useEffect(() => {
-    const duration = 2000;
+    const duration = 1500;
     const target = 100;
     const intervalTime = duration / target;
 
