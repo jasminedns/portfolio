@@ -47,8 +47,15 @@ const Header = ({font}:HeaderProps) => {
                         {links.map((item, index) => (
                             <li key={index} className="list-none text-5xl my-[48px]" onClick={() => setOpen(false)}>
                                 <a 
-                                    href={item.href} 
-                                    className="inline-block font-semibold text-center no-underline"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const section = document.querySelector(item.href);
+                                        if (section) {
+                                        section.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                        setOpen(false);
+                                    }} 
+                                    className="inline-block font-semibold text-center no-underline cursor-pointer"                                
                                 >
                                 {item.label}
                                 </a>
@@ -62,7 +69,14 @@ const Header = ({font}:HeaderProps) => {
                     {links.map((item, index) => (
                         <li key={index} className="list-none">
                             <a 
-                                href={item.href} 
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    const section = document.querySelector(item.href);
+                                    if (section) {
+                                    section.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                    setOpen(false);
+                                }} 
                                 className="inline-block font-semibold relative min-h-[19px] w-[84px] text-center no-underline 
                                     hover:font-bold hover:transition-all hover:duration-500 ease-in-out group"
                             >

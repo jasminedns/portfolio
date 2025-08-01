@@ -115,14 +115,14 @@ export default function Home() {
         </div>
       }
       <div className='relative min-h-[90vh] md:flex md:flex-col md:justify-center md:items-center'>
-        <Image src='/home-bg.jpg' alt='purple background image' width={1000} height={700} className='hidden md:block mt-5 w-full h-[90vh]'/>
+        <Image src='/home-bg.jpg' alt='purple background image' width={1000} height={700} className='hidden lg:block mt-5 w-full h-[90vh]'/>
         <div className='text-center md:border-0 md:absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] md:w-full md:p-[25px]'>
           <div className="mx-0 md:py-10 grid grid-rows-[1fr_1fr_1fr] md:grid-cols-2 min-h-[90vh]">
-            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] md:pl-10 md:row-start-1 ${overpassMono.className} my-auto`}>
+            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] lg:text-[ivory] lg:pl-10 md:row-start-1 ${overpassMono.className} my-auto`}>
               <h2 className='md:py-0 text-left'>Front-</h2>
               <h2 className='md:py-0 text-left'>end</h2>
             </div>
-            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] md:text-[ivory] md:pr-10 md:row-start-3 md:col-start-2 ${overpassMono.className} my-auto`}>
+            <div className={`text-8xl tracking-tighter uppercase text-[#e0b0ff] lg:text-[ivory] lg:pr-10 md:row-start-3 md:col-start-2 ${overpassMono.className} my-auto`}>
               <h2 className='text-right'>Dev</h2>
               <h2 className='text-right'>eloper</h2>
             </div>
